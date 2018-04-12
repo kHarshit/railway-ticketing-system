@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <passenger.h>
 #include <journey.h>
 
 namespace Ui {
@@ -28,7 +27,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    Passenger *pass1;
     Journey *jou1;
 };
 

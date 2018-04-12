@@ -26,15 +26,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    passenger.cpp \
     journey.cpp
 
 HEADERS += \
         mainwindow.h \
-    passenger.h \
     journey.h
 
 FORMS += \
         mainwindow.ui \
-    passenger.ui \
     journey.ui
