@@ -29,6 +29,8 @@ private slots:
 
     void on_actionHome_triggered();
 
+    void on_pushButton_bookTicket_clicked();
+
 private:
     Ui::Journey *ui;
     QTimer *timer;

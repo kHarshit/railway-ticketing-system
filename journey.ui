@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Railway Reservation System</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_time">
@@ -53,12 +53,17 @@
             <string>From</string>
            </property>
            <property name="buddy">
-            <cstring>comboBox</cstring>
+            <cstring>comboBox_from</cstring>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox">
+          <widget class="QComboBox" name="comboBox_from">
+           <item>
+            <property name="text">
+             <string>----</string>
+            </property>
+           </item>
            <item>
             <property name="text">
              <string>Delhi</string>
@@ -86,12 +91,17 @@
             <string>To</string>
            </property>
            <property name="buddy">
-            <cstring>comboBox_2</cstring>
+            <cstring>comboBox_to</cstring>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox_2">
+          <widget class="QComboBox" name="comboBox_to">
+           <item>
+            <property name="text">
+             <string>----</string>
+            </property>
+           </item>
            <item>
             <property name="text">
              <string>Delhi</string>
@@ -131,6 +141,19 @@
       </layout>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_bookTicket">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>180</y>
+      <width>84</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Book Ticket</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

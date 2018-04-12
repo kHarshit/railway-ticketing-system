@@ -58,3 +58,17 @@ void Journey::on_actionHome_triggered()
     qApp->quit();
     QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
 }
+
+void Journey::on_pushButton_bookTicket_clicked()
+{
+    if(ui->comboBox_from->currentText()=="----" ||
+            ui->comboBox_to->currentText()=="----")
+        QMessageBox::warning(this, "Error!", "Please select From and To stations");
+    else if(ui->comboBox_from->currentText() == "Delhi" &&
+            ui->comboBox_to->currentText() == "Mumbai"){
+        QMessageBox::information(this,
+                                 "Ticket booked",
+                                 "Your ticket from Delhi to Mumbai is confirmed.\n"
+                                 "Cost: Rs2020");
+    }
+}
