@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDesktopServices>
 #include <QMessageBox>
+#include <QUrl>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -16,9 +18,15 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_nextPassenger_clicked()
 {
-    jou1 = new Journey(this);
-    this->hide();
-    jou1->show();
+    QString username = ui->lineEdit_username->text();
+    QString password = ui->lineEdit_password->text();
+    if(username == "test" && password == "test"){
+        jou1 = new Journey(this);
+        this->hide();
+        jou1->show();
+    }
+    else
+        ui->statusBar->showMessage("username and password not correct. Please try again!", 3500);
 }
 
 void MainWindow::on_actionAbout_Qt_triggered()
