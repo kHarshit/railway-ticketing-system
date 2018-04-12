@@ -16,9 +16,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_nextPassenger_clicked()
 {
-    pass1 = new Passenger(this);
+    jou1 = new Journey(this);
     this->hide();
-    pass1->show();
+    jou1->show();
 }
 
 void MainWindow::on_actionAbout_Qt_triggered()

@@ -2,6 +2,7 @@
 #define PASSENGER_H
 
 #include <QDialog>
+#include <QTimer>
 
 namespace Ui {
 class Passenger;
@@ -15,8 +16,12 @@ public:
     explicit Passenger(QWidget *parent = 0);
     ~Passenger();
 
+public slots:
+    void mytimer();
+
 private:
     Ui::Passenger *ui;
+    QTimer *timer;
 };
 
 #endif // PASSENGER_H

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <passenger.h>
+#include <journey.h>
 
 namespace Ui {
 class MainWindow;
@@ -28,6 +29,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Passenger *pass1;
+    Journey *jou1;
 };
 
 #endif // MAINWINDOW_H
