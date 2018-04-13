@@ -79,6 +79,16 @@
              <string>Mumbai</string>
             </property>
            </item>
+           <item>
+            <property name="text">
+             <string>Jaipur</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>New Item</string>
+            </property>
+           </item>
           </widget>
          </item>
         </layout>
@@ -115,6 +125,11 @@
            <item>
             <property name="text">
              <string>Mumbai</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Jaipur</string>
             </property>
            </item>
           </widget>
