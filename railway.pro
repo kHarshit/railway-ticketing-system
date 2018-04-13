@@ -35,3 +35,6 @@ HEADERS += \
 FORMS += \
         mainwindow.ui \
     journey.ui
+
+RESOURCES += \
+    res.qrc

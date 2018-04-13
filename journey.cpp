@@ -4,6 +4,9 @@
 #include <QMessageBox>
 #include <QApplication>
 #include <QProcess>
+#include <QFile>
+#include <QString>
+#include <QDebug>
 
 Journey::Journey(QWidget *parent) :
     QMainWindow(parent),
@@ -71,4 +74,17 @@ void Journey::on_pushButton_bookTicket_clicked()
                                  "Your ticket from Delhi to Mumbai is confirmed.\n"
                                  "Cost: Rs2020");
     }
+
+    // TODO: Add csv data input functionality
+    QFile file(":/fare.csv");
+    if(!file.open(QIODevice::ReadOnly)){
+        qDebug() << file.errorString();
+    }
+    QString dataList;
+    while (!file.atEnd()) {
+        QByteArray line = file.readLine();
+        dataList.append(line.split(',').first());  // selecting first column
+    }
+    qDebug() << dataList;
+
 }
