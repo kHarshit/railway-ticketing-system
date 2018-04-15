@@ -55,5 +55,6 @@ void MainWindow::on_actionQuit_triggered()
 
 void MainWindow::on_actionReport_Bug_triggered()
 {
-
+    QString url = "https://github.com/kHarshit/railway-ticketing-system/issues/new";
+    QDesktopServices::openUrl(QUrl(url));
 }
