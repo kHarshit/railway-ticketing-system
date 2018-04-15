@@ -25,6 +25,8 @@ private slots:
 
     void on_actionQuit_triggered();
 
+    void on_actionReport_Bug_triggered();
+
 private:
     Ui::MainWindow *ui;
     Journey *jou1;

@@ -38,7 +38,7 @@ to
 Railway Reservation System</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -133,6 +133,8 @@ Railway Reservation System</string>
      <string>Help</string>
     </property>
     <addaction name="separator"/>
+    <addaction name="actionReport_Bug"/>
+    <addaction name="separator"/>
     <addaction name="actionAbout"/>
     <addaction name="actionAbout_Qt"/>
    </widget>
@@ -164,6 +166,11 @@ Railway Reservation System</string>
    </property>
   </action>
   <action name="actionReport_bug">
+   <property name="text">
+    <string>Report Bug</string>
+   </property>
+  </action>
+  <action name="actionReport_Bug">
    <property name="text">
     <string>Report Bug</string>
    </property>

@@ -67,12 +67,23 @@ void Journey::on_pushButton_bookTicket_clicked()
     if(ui->comboBox_from->currentText()=="----" ||
             ui->comboBox_to->currentText()=="----")
         QMessageBox::warning(this, "Error!", "Please select From and To stations");
-    else if(ui->comboBox_from->currentText() == "Delhi" &&
-            ui->comboBox_to->currentText() == "Mumbai"){
+    else {
+        QString cost;
+        if(ui->comboBox_from->currentText() == "Delhi" &&
+            ui->comboBox_to->currentText() == "Pune")
+                cost = "2020";
+        else
+            cost = "NA";
+
         QMessageBox::information(this,
                                  "Ticket booked",
-                                 "Your ticket from Delhi to Mumbai is confirmed.\n"
-                                 "Cost: Rs2020");
+                                 "Your ticket from " +
+                                 ui->comboBox_from->currentText() +
+                                 " to " +
+                                 ui->comboBox_to->currentText() +
+                                 " is confirmed.\n"
+                                 "Cost: ₹" + cost
+                                 );
     }
 
     // TODO: Add csv data input functionality
