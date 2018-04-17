@@ -81,6 +81,8 @@ void Journey::on_pushButton_bookTicket_clicked()
                                  ui->comboBox_from->currentText() +
                                  " to " +
                                  ui->comboBox_to->currentText() +
+                                 " on " +
+                                 ui->dateEdit->text() +
                                  " is confirmed.\n"
                                  "Cost: ₹" + cost
                                  );
