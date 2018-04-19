@@ -64,31 +64,7 @@ void Journey::on_actionHome_triggered()
 
 void Journey::on_pushButton_bookTicket_clicked()
 {
-    if(ui->comboBox_from->currentText()=="----" ||
-            ui->comboBox_to->currentText()=="----")
-        QMessageBox::warning(this, "Error!", "Please select From and To stations");
-    else {
-        QString cost;
-        if(ui->comboBox_from->currentText() == "Delhi" &&
-            ui->comboBox_to->currentText() == "Pune")
-                cost = "2020";
-        else
-            cost = "NA";
-
-        QMessageBox::information(this,
-                                 "Ticket booked",
-                                 "Your ticket from " +
-                                 ui->comboBox_from->currentText() +
-                                 " to " +
-                                 ui->comboBox_to->currentText() +
-                                 " on " +
-                                 ui->dateEdit->text() +
-                                 " is confirmed.\n"
-                                 "Cost: ₹" + cost
-                                 );
-    }
-
-    // TODO: Add csv data input functionality
+    /* file handling: csv data input functionality */
     QFile file(":/fare.csv");
     if(!file.open(QIODevice::ReadOnly)){
         qDebug() << file.errorString();
@@ -100,7 +76,52 @@ void Journey::on_pushButton_bookTicket_clicked()
         toList.append(line.split(',').at(1));
         fareList.append(line.split(',').at(2));
     }
-    qDebug() << fromList;
-    qDebug() << toList.at(1);
 
+    /* Button functionality */
+    if(ui->comboBox_from->currentText()=="----" ||
+            ui->comboBox_to->currentText()=="----")
+        QMessageBox::warning(this, "Error!", "Please select From and To stations");
+    else {
+        QString fromStation = ui->comboBox_from->currentText();
+        QString toStation = ui->comboBox_to->currentText();
+        QString cost;
+        qint16 id;
+
+        /*
+         * l1 = ("a", "b", "d", "c", "d", "b")
+         * l2 = ("b", "a", "b", "b", "a", "c")
+         * l3 = (2, 4, 3, 5, 4, 5)  // fare
+         * if index of inputs in l1 and l2 are same then fare will be the value at that index in l3
+         * if "d" and "a" are input then index will be 5 hence fare will be the value corresponding to index 5 in l3 i.e. 4
+         * */
+
+        for (int i = 0; i < fromList.size(); ++i) {
+                if (fromList.indexOf(fromStation) == toList.indexOf(toStation)){
+                    id = fromList.indexOf(fromStation);
+                    break;
+                }
+        }
+
+        if (id == 0)
+            cost = "NA";
+        else
+            cost = fareList.at(id);
+
+        qDebug() << "fromStation: " << fromStation
+                 << ", toStation: " << toStation
+                 << ", id: " << id
+                 << ", cost: " << cost;
+
+        QMessageBox::information(this,
+                                 "Ticket booked",
+                                 "Your ticket from " +
+                                 fromStation +
+                                 " to " +
+                                 toStation +
+                                 " on " +
+                                 ui->dateEdit->text() +
+                                 " is confirmed.\n"
+                                 "Cost: ₹" + cost
+                                 );
+    }
 }
