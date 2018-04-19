@@ -31,6 +31,8 @@ private slots:
 
     void on_pushButton_bookTicket_clicked();
 
+    void on_dateEdit_dateChanged(const QDate &date);
+
 private:
     Ui::Journey *ui;
     QTimer *timer;

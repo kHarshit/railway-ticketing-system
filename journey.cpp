@@ -93,11 +93,14 @@ void Journey::on_pushButton_bookTicket_clicked()
     if(!file.open(QIODevice::ReadOnly)){
         qDebug() << file.errorString();
     }
-    QString dataList;
+    QList<QString> fromList, toList, fareList;
     while (!file.atEnd()) {
         QByteArray line = file.readLine();
-        dataList.append(line.split(',').first());  // selecting first column
+        fromList.append(line.split(',').first());  // selecting first column
+        toList.append(line.split(',').at(1));
+        fareList.append(line.split(',').at(2));
     }
-    qDebug() << dataList;
+    qDebug() << fromList;
+    qDebug() << toList.at(1);
 
 }
