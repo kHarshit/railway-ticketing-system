@@ -78,12 +78,17 @@ void Journey::on_pushButton_bookTicket_clicked()
     }
 
     /* Button functionality */
-    if(ui->comboBox_from->currentText()=="----" ||
-            ui->comboBox_to->currentText()=="----")
+    QString fromStation = ui->comboBox_from->currentText();
+    QString toStation = ui->comboBox_to->currentText();
+
+    if(fromStation == "----" ||
+            toStation == "----")
         QMessageBox::warning(this, "Error!", "Please select From and To stations");
+
+    else if (fromStation == toStation)
+        QMessageBox::warning(this, "Error!", "From to To stations can\'t be same.");
+
     else {
-        QString fromStation = ui->comboBox_from->currentText();
-        QString toStation = ui->comboBox_to->currentText();
         QString cost;
         qint16 id;
 
