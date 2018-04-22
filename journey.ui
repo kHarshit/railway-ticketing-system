@@ -118,7 +118,7 @@
              </item>
              <item>
               <property name="text">
-               <string>New Item</string>
+               <string>Kolkata</string>
               </property>
              </item>
             </widget>
@@ -162,6 +162,11 @@
              <item>
               <property name="text">
                <string>Jaipur</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Kolkata</string>
               </property>
              </item>
             </widget>

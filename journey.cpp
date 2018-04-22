@@ -109,15 +109,15 @@ void Journey::on_pushButton_bookTicket_clicked()
 
         if (id == 0){
             for (int i = 0; i < toList.size(); ++i) {
-                if (toList.indexOf(toStation) == fromList.indexOf(fromStation)){
+                if (toList.indexOf(fromStation) == fromList.indexOf(toStation)){
                     id = toList.indexOf(toStation);
+                    qDebug() << id;
                     break;
                 }
             }
             //cost = "NA";
         }
-        else
-            cost = fareList.at(id);
+        cost = fareList.at(id);
 
         qDebug() << "fromStation: " << fromStation
                  << ", toStation: " << toStation
