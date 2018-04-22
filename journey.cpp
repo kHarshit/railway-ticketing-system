@@ -141,7 +141,9 @@ void Journey::on_pushButton_bookTicket_clicked()
                                  "\nFrom: " + fromStation +
                                  "\nDate of Journey: " + ui->dateEdit->text() +
                                  "\nTo: " + toStation +
-                                 "\nCoach No: AC2"
+                                 "\nCoach No: " +
+                                 QString(QChar('A' + (qrand() % 9))) +  // random character
+                                 QString::number(qrand() % 9)  // random number
                                  );
     }
 }
