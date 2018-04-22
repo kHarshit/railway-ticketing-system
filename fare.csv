@@ -1,4 +1,11 @@
 From,To,Fare
 Delhi,Pune,2020
+Delhi,Jaipur,780
 Pune,Mumbai,100
 Mumbai,Delhi,1640
+Delhi,Kolkata,1700
+Pune,Jaipur,3690
+Pune,Kolkata,4237
+Mumbai,Jaipur,1405
+Mumbai,Kolkata,3864
+Kolkata,Jaipur,3321
