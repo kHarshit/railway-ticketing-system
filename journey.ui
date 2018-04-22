@@ -33,139 +33,11 @@
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>60</y>
-      <width>140</width>
-      <height>107</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>From</string>
-           </property>
-           <property name="buddy">
-            <cstring>comboBox_from</cstring>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox_from">
-           <item>
-            <property name="text">
-             <string>----</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Delhi</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Pune</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Mumbai</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Jaipur</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>New Item</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>To</string>
-           </property>
-           <property name="buddy">
-            <cstring>comboBox_to</cstring>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox_to">
-           <item>
-            <property name="text">
-             <string>----</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Delhi</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Pune</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Mumbai</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Jaipur</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Date</string>
-         </property>
-         <property name="buddy">
-          <cstring>dateEdit</cstring>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QDateEdit" name="dateEdit">
-         <property name="calendarPopup">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
    <widget class="QPushButton" name="pushButton_bookTicket">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>180</y>
+      <x>170</x>
+      <y>210</y>
       <width>84</width>
       <height>28</height>
      </rect>
@@ -173,6 +45,155 @@
     <property name="text">
      <string>Book Ticket</string>
     </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>50</y>
+      <width>174</width>
+      <height>145</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Name</string>
+         </property>
+         <property name="buddy">
+          <cstring>lineEdit_PassengerName</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_PassengerName"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>From</string>
+             </property>
+             <property name="buddy">
+              <cstring>comboBox_from</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_from">
+             <item>
+              <property name="text">
+               <string>----</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Delhi</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Pune</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Mumbai</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Jaipur</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>New Item</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>To</string>
+             </property>
+             <property name="buddy">
+              <cstring>comboBox_to</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_to">
+             <item>
+              <property name="text">
+               <string>----</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Delhi</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Pune</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Mumbai</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Jaipur</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Date</string>
+           </property>
+           <property name="buddy">
+            <cstring>dateEdit</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dateEdit">
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

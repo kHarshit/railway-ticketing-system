@@ -119,14 +119,22 @@ void Journey::on_pushButton_bookTicket_clicked()
 
         QMessageBox::information(this,
                                  "Ticket booked",
-                                 "Your ticket from " +
+                                 "Hello " +
+                                 ui->lineEdit_PassengerName->text() +
+                                 "!\nYour ticket from " +
                                  fromStation +
                                  " to " +
                                  toStation +
                                  " on " +
                                  ui->dateEdit->text() +
                                  " is confirmed.\n"
-                                 "Cost: ₹" + cost
+                                 "Cost: ₹" + cost +
+                                 "\n\nDetails:\n" +
+                                 "Passenger Name: " + ui->lineEdit_PassengerName->text() +
+                                 "\nFrom: " + fromStation +
+                                 "\nDate of Journey: " + ui->dateEdit->text() +
+                                 "\nTo: " + toStation +
+                                 "\nCoach No: AC2"
                                  );
     }
 }
