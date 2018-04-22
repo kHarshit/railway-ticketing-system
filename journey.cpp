@@ -107,8 +107,15 @@ void Journey::on_pushButton_bookTicket_clicked()
                 }
         }
 
-        if (id == 0)
-            cost = "NA";
+        if (id == 0){
+            for (int i = 0; i < toList.size(); ++i) {
+                if (toList.indexOf(toStation) == fromList.indexOf(fromStation)){
+                    id = toList.indexOf(toStation);
+                    break;
+                }
+            }
+            //cost = "NA";
+        }
         else
             cost = fareList.at(id);
 
